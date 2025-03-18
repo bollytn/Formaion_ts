@@ -1,5 +1,6 @@
 import { useContext, useReducer } from "react"
-import { color } from "../context/Context"
+import { Color } from "../context/ColorContext"
+import { CSSProperties } from "react"
 
 const initialState = { count: 0 }
 
@@ -31,8 +32,7 @@ const reducer = (state:CounterState, action:CounterAction) => {
 }
 
 const Counter = () => {
-
-    const colorBg = useContext(color)
+    const colorBg = useContext(Color) as CSSProperties["backgroundColor"]
         
     const [state, dispatch] = useReducer(reducer, initialState)
     return (

@@ -1,3 +1,12 @@
-import { createContext } from "react";
+import {Color} from './ColorContext';
 
-export const color = createContext<string | null>(null);
+type ColorProps = {
+    children: React.ReactNode;
+};
+
+export default function UserContextProvider({ children }: ColorProps) {
+
+    return <Color.Provider value="blue">
+        {children}
+    </Color.Provider>;
+}

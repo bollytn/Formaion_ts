@@ -1,7 +1,7 @@
 import Counter from './_components/Counter'
 import './App.css'
 
-import {color} from './context/Context'
+import  UserContextProvider  from './context/Context'
 
 {/*
   const productData = [
@@ -37,9 +37,9 @@ function App() {
       
       
       */}
-      <color.Provider value='blue'>
-      <Counter />
-      </color.Provider>
+      <UserContextProvider>
+        <Counter />
+      </UserContextProvider>
 
 
     </div>
