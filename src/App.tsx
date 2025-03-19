@@ -1,6 +1,5 @@
-import Header from './_components/expBashir/Header'
-import {ThemeContextProvider} from './_components/expBashir/ThemeContext'
-
+import { UserContextProvider } from './context/UserContext'  
+import User from './_components/User'
 
 {/*
   const productData = [
@@ -39,10 +38,9 @@ function App() {
         <Counter />
       </UserContextProvider>
     */}
-      <ThemeContextProvider>
-        <Header />
-      </ThemeContextProvider>
-
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   )
 }
