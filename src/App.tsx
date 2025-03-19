@@ -1,7 +1,6 @@
-import Counter from './_components/Counter'
-import './App.css'
+import Header from './_components/expBashir/Header'
+import {ThemeContextProvider} from './_components/expBashir/ThemeContext'
 
-import  UserContextProvider  from './context/Context'
 
 {/*
   const productData = [
@@ -28,19 +27,21 @@ import  UserContextProvider  from './context/Context'
 function App() {
 
   return (
-    <div className="App">
+    <div className="h-screen w-screen overflow-hidden flex flex-col items-center justify-center">
       {/* 
       <Bouton handleClick={(e, id) => console.log(e.target, id)} />
       <Input value="" handleChange={(event) => console.log(event.target.value)} />  
       <Container style={{  backgroundColor: 'red',border: '1px solid black',padding: '1rem'}} />
     <Products productData={productData} />
       
-      
-      */}
+  
       <UserContextProvider>
         <Counter />
       </UserContextProvider>
-
+    */}
+      <ThemeContextProvider>
+        <Header />
+      </ThemeContextProvider>
 
     </div>
   )
