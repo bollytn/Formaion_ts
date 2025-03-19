@@ -1,15 +1,25 @@
-import { useState } from 'react'
-import {userType} from '../types/app'
+
 const User = () => {
-    const [user, setUser] = useState<userType>({} as userType)
+
+    const handleLogin = () => {
+        console.log('Login')
+    }
+
+    const handleLogout = () => {
+        console.log('Logout')
+    }
+
     return (
         <div>
-            <button onClick={() => setUser({ name: "Bilel", age: 39 })}>Login</button>
-            <button onClick={() => setUser({} as userType)}>Logout</button>
-            <h2>User name is {user.name}</h2>
-            <h2>User age is {user.age}</h2>
+            <button onClick={handleLogin} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Login</button>
+            <button onClick={handleLogout} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Logout</button>
+
+            <h2>User name is :</h2>
+            <h2>User emainl is :</h2>
+
         </div>
-    )
+
+)
 }
 
 export default User
